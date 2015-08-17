@@ -1,10 +1,20 @@
-vim-zimwiki-syntax
-==================
+Vim Syntax File and File Type Detection for Zim
+===============================================
 
-Zim Wiki Syntax support for Vim.
-
-This files provides support for **syntaxis highlight** and **file detection**.
+This plugin adds support to handle notes created by the [Zim](http://zim-wiki.org) editor. It covers syntax and file type detection.
 
 Installation
 ------------
-Copy the files to your *ftdetect* (i.e., `~/.vim/ftdetect/`) and *syntax* (i.e., `~/.vim/syntax/`) directories.
+
+### Option 1: Manual installation
+
+1. Move `ftdetect/zimwiki.vim` to your `~/.vim/ftdetect` directory.
+2. Move `syntax/zimwiki.vim` to your `~/.vim/syntax` directory.
+
+### Option 2: Vundle installation
+
+1. Open your `~/.vimrc` file and add the following line:
+```vim
+Plugin 'joanrivera/vim-zimwiki-syntax'
+```
+2. Run `:PluginInstall`
