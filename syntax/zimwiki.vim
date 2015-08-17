@@ -1,9 +1,9 @@
-" Vim syntax file
-" Language: Zim Wiki
-" Maintainer: Joan Rivera
-" Latest Revision: 16 September 2014
+" Language: ZimWiki
+" Maintainer: Joan Rivera <joan.manuel.rivera+dev@gmail.com>
+" URL: https://github.com/joanrivera/vim-zimwiki-syntax
+" License: MIT
 
-if exists("b:current_syntax")
+if exists('b:current_syntax') && b:current_syntax == 'zimwiki'
   finish
 endif
 
@@ -28,9 +28,6 @@ syn match zimwikiSup '\^{.\{-1,}}'
 syn region zimwikiCode start="'''" end="'''"
 
 
-let b:current_syntax = "zimwiki"
-
-
 hi def link zimwikiHeader1	Title
 hi def link zimwikiHeader2	Title
 hi def link zimwikiHeader3	Title
@@ -51,3 +48,7 @@ hi def link zimwikiSup	Number
 
 hi def link zimwikiCode	SpecialComment
 
+
+if !exists('b:current_syntax')
+  let b:current_syntax = 'zimwiki'
+endif
