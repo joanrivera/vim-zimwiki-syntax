@@ -14,6 +14,7 @@ syn match zimwikiHeader4 '^=\{3} .\+ =\{3}[[:space:]]*$'
 syn match zimwikiHeader5 '^=\{2} .\+ =\{2}[[:space:]]*$'
 
 syn match zimwikiLink '\[\[.\{-1,}\]\]'
+
 syn match zimwikiListItem '^[[:blank:]]*\* .\+'
 syn match zimwikiCheckbox '\[[ \*x]\]'
 syn match zimwikiStrong '\*\*.\{-1,}\*\*'
@@ -24,6 +25,7 @@ syn match zimwikiStrikeThrough '\~\~.\{-1,}\~\~'
 syn match zimwikiImage '{{.\{-1,}}}'
 syn match zimwikiSub '_{.\{-1,}}'
 syn match zimwikiSup '\^{.\{-1,}}'
+syn match zimwikiTag '\k\@<!@\k\S*' containedin=zimwikiListItem
 
 syn region zimwikiCode start="'''" end="'''"
 
@@ -45,6 +47,9 @@ hi def link zimwikiStrikeThrough	Comment
 hi def link zimwikiImage	Float
 hi def link zimwikiSub	Number
 hi def link zimwikiSup	Number
+" hi! def link zimwikiTag Number
+hi! def link zimwikiTag PreProc
+
 
 hi def link zimwikiCode	SpecialComment
 
