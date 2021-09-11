@@ -14,7 +14,6 @@ syn match zimwikiHeader4 '^=\{3} .\+ =\{3}[[:space:]]*$'
 syn match zimwikiHeader5 '^=\{2} .\+ =\{2}[[:space:]]*$'
 
 syn match zimwikiLink '\[\[.\{-1,}\]\]'
-
 syn match zimwikiListItem '^[[:blank:]]*\* .\+'
 syn match zimwikiCheckbox '\[[ \*x]\]'
 syn match zimwikiStrong '\*\*.\{-1,}\*\*'
@@ -47,12 +46,9 @@ hi def link zimwikiStrikeThrough	Comment
 hi def link zimwikiImage	Float
 hi def link zimwikiSub	Number
 hi def link zimwikiSup	Number
-" hi! def link zimwikiTag Number
 hi! def link zimwikiTag PreProc
 
-
 hi def link zimwikiCode	SpecialComment
-
 
 if !exists('b:current_syntax')
   let b:current_syntax = 'zimwiki'
