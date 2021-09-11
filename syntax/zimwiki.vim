@@ -24,6 +24,7 @@ syn match zimwikiStrikeThrough '\~\~.\{-1,}\~\~'
 syn match zimwikiImage '{{.\{-1,}}}'
 syn match zimwikiSub '_{.\{-1,}}'
 syn match zimwikiSup '\^{.\{-1,}}'
+syn match zimwikiTag '\k\@<!@\k\S*' containedin=zimwikiListItem
 
 syn region zimwikiCode start="'''" end="'''"
 
@@ -45,9 +46,9 @@ hi def link zimwikiStrikeThrough	Comment
 hi def link zimwikiImage	Float
 hi def link zimwikiSub	Number
 hi def link zimwikiSup	Number
+hi! def link zimwikiTag PreProc
 
 hi def link zimwikiCode	SpecialComment
-
 
 if !exists('b:current_syntax')
   let b:current_syntax = 'zimwiki'
